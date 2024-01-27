@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { colors } from '../../style/themes';
 
 export const Root = styled.div`
     display: block;
@@ -9,6 +9,7 @@ export const Root = styled.div`
     width: 280px;
     height: 100vh;
     z-index: 999;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease-in-out;
 `;
 
@@ -21,8 +22,22 @@ export const Container = styled.div`
 export const List = styled.ul`
     display: block;
     position: relative;
-    padding; 0;
+    height: calc(100vh - 350px);
+    padding: 0;
+    overflow: auto;
     transition: all 0.5s ease;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+    &::-webkit-scrollbar-thumb {
+    background-color: ${colors.blue};
+    border-radius: 4px;
+    }
+
+    scrollbar-width: 6px;
+    scrollbar-color: ${colors.blue};
 `;
 
 /*export const StyledSidebar = styled.div`
