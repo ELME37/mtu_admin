@@ -1,5 +1,3 @@
-import MyTeam from "../pages/myTeam/myTeam";
-
 const ROUTES = {
     home: "/",
     account: "/account",
@@ -9,7 +7,8 @@ const ROUTES = {
     campaign2022: "/historique/campagne 2022",
     campaign2023: "/historique/campagne 2023",
     login: "/login",
-    myTeam: (myTeam = ":id") => `/mon équipe/${MyTeam}`,
+    collaborateurs: "/collaborateurs",
+    myTeam: (collaborateur = ":id") => `/collaborateurs/${collaborateur}`,
     planning: "/planning",
     reporting: "/reporting",
 };

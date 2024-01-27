@@ -1,12 +1,14 @@
 import React from "react";
-import { StyledContainer } from "./layout.styled";
+import { Root } from "./layout.styled";
+import Header from "../header/header";
+import Footer from "../footer/footer";
 
 export default function Layout ({children}){
     return (
-        <StyledContainer>
-            <div className="container">
-                    {children}
-            </div>
-        </StyledContainer>
+        <Root>
+            <Header/>
+            {children}
+            <Footer/>
+        </Root>
     )
 }
