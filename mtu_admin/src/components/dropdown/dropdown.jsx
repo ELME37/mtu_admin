@@ -5,7 +5,7 @@ import { DropdownContent } from "./dropdown.styled";
 import { DropdownLink } from "./dropdown.styled";
 import { Dropbtn } from "./dropdown.styled";
 
-export default function Dropdown ({ buttonText, links, trigger }) {
+export default function Dropdown ({ buttonText, links}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -18,10 +18,10 @@ export default function Dropdown ({ buttonText, links, trigger }) {
 
   return (
     <DropdownContainer>
-      <Dropbtn onClick={() => trigger === 'click' && handleToggle()}>
+      <Dropbtn onClick={handleToggle}>
         {buttonText}
       </Dropbtn>
-      <DropdownContent $trigger={trigger} className={isOpen ? 'open' : ''}>
+      <DropdownContent className={isOpen ? 'open' : ''}>
         {links.map((link, index) => (
           <DropdownLink key={index} to={link.href} onClick={closeDropdown}>
             {link.label}

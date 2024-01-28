@@ -19,21 +19,10 @@ export const DropdownContent = styled.div`
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 
-  ${({ $trigger }) =>
-    $trigger === 'hover' &&
-    `
     ${DropdownContainer}:hover & {
       display: block;
     }
-  `}
-
-  ${({ $trigger }) =>
-    $trigger === 'click' &&
-    `
-    &.open {
-      display: block;
-    }
-  `}
+  
 `;
 
 export const DropdownLink = styled.a`
