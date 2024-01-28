@@ -9,7 +9,8 @@ export const Root = styled.div`
     width: 280px;
     height: 100vh;
     z-index: 999;
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    transform: ${props => (props.$isOpen ? 'translateX(0)' : 'translateX(-280px)')};
     transition: transform 0.3s ease-in-out;
 `;
 
@@ -39,38 +40,3 @@ export const List = styled.ul`
     scrollbar-width: 6px;
     scrollbar-color: ${colors.blue};
 `;
-
-/*export const StyledSidebar = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: ${(props) => (props.$isOpen ? '280px' : '120px')};
-    width: 280px;
-    height: 100vh;
-    line-height: inherit;
-    position: fixed;
-    overflow: hidden;
-    text-align: left;
-    top: 0;
-    transition: .3s;
-    z-index: 999;
-`;
-
-export const SidebarContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: yellow;
-`;
-
-export const SidebarBtn = styled.div`
-    width: 80%;
-    background-color: blue;
-`;
-
-export const StyledSVG = styled.svg`
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
-`;*/

@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ROUTES from '../../router/routes';
 import { Root, Container, List} from "./sidebar.styled";
 import Logo from '../logo/logo';
 import NavLinkSidebar from '../navLinkSidebar/navLinkSidebar';
 import FooterSidebar from '../footerSidebar/footerSidebar';
 
-export default function Sidebar () {
-    
-
+export default function Sidebar ({ isOpen }) {
     return (
-        <Root>
+        <Root $isOpen={isOpen}>
             <Container>
                 <Logo/>
                 <List>
@@ -17,7 +15,6 @@ export default function Sidebar () {
                         to={ROUTES.collaborateurs}
                         icon={<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20"><path d="M12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16ZM5.683,16H1a1,1,0,0,1-1-1A6.022,6.022,0,0,1,5.131,9.084a1,1,0,0,1,1.1,1.266A6.009,6.009,0,0,0,6,12a5.937,5.937,0,0,0,.586,2.57,1,1,0,0,1-.9,1.43ZM17,24H7a1,1,0,0,1-1-1,6,6,0,0,1,12,0A1,1,0,0,1,17,24ZM18,8a4,4,0,1,1,4-4A4,4,0,0,1,18,8ZM6,8a4,4,0,1,1,4-4A4,4,0,0,1,6,8Zm17,8H18.317a1,1,0,0,1-.9-1.43A5.937,5.937,0,0,0,18,12a6.009,6.009,0,0,0-.236-1.65,1,1,0,0,1,1.105-1.266A6.022,6.022,0,0,1,24,15,1,1,0,0,1,23,16Z"/></svg>}
                         title="Mes Collaborateurs"
-                        subBtn={["test1", "test2", "test3", "oktest4"]}
                         
                     />
                     <NavLinkSidebar
@@ -34,6 +31,7 @@ export default function Sidebar () {
                         to={""}
                         icon={<svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="20" height="20"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"/></svg>}
                         title="Historique"
+                        subBtn={["Campagne 2023", "Campagne 2022", "Campagne 2021", "Campagne 2020"]}
                     />
                     <NavLinkSidebar
                         to={ROUTES.reporting}

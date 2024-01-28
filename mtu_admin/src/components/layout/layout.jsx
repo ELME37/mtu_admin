@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 import { Root } from "./layout.styled";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 
-export default function Layout ({children}){
+export default function Layout({ children, isSidebarOpen, toggleSidebar }) {
     return (
-        <Root>
-            <Header/>
+        <Root $isSidebarOpen={isSidebarOpen}>
+            <Header toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
             {children}
-            <Footer/>
+            <Footer />
         </Root>
-    )
+    );
 }

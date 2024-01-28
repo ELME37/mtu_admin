@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLinks, Icon, NavBtn, Arrow , SubMenu, SubLinks} from './navLinkSidebar.styled';
 
-export default function NavLinkSidebar ({to, icon, title, subBtn, handleClick}) {
+export default function NavLinkSidebar ({to, icon, title, subBtn}) {
     const [openSubMenu, setOpenSubMenu] = useState(false)
 
     const handleSubMenu = () => {
@@ -13,7 +13,6 @@ export default function NavLinkSidebar ({to, icon, title, subBtn, handleClick}) 
             <NavLinks 
                 strict="true"
                 to={to} 
-                onClick={handleClick}
             >
                 <Icon>{icon}</Icon>
                 {title}
@@ -38,8 +37,7 @@ export default function NavLinkSidebar ({to, icon, title, subBtn, handleClick}) 
                     subBtn.map((btn, i) => (
                         <div key={i}>
                             <SubLinks
-                                to={to + "/" + btn.toUpperCase()}
-                                onClick={handleClick}
+                                to={to + "/" + "historique" + "/" + btn.toLowerCase()}
                             >
                                 <span>-</span>
                                 <span>{btn}</span>
