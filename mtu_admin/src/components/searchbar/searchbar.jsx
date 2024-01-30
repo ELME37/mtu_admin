@@ -1,10 +1,9 @@
 import React from 'react';
-import { StyledSearchBar } from "./searchbar.styled";
-import { StyledInput } from "./searchbar.styled";
+import { Root, Input } from "./searchbar.styled";
 
 export default function Searchbar () {
     return (
-        <StyledSearchBar>
+        <Root>
              <svg
         width="24"
         height="24"
@@ -33,7 +32,7 @@ export default function Searchbar () {
           </g>
         </g>
       </svg>
-            <StyledInput type="text" placeholder="Search here..."/>
-        </StyledSearchBar>
+            <Input type="text" placeholder="Search here..."/>
+        </Root>
     );
 };

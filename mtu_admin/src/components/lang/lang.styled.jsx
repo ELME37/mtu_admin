@@ -1,45 +1,64 @@
 import styled from "styled-components";
+import { colors } from "../../style/themes";
 
-export const DropdownContainer = styled.div`
+export const Root = styled.div`
   position: relative;
   display: inline-block;
 `;
 
-export const DropdownButton = styled.button`
+export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4caf50;
+  background-color: ${colors.blue};
   color: white;
-  padding: 10px;
   font-size: 16px;
   border: none;
   cursor: pointer;
 `;
 
-export const DropdownContent = styled.div`
-  display: none;
+export const Content = styled.div`
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  background-color: #f1f1f1;
+  margin-top: 20px;
+  background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
-  ${DropdownContainer}:hover & {
-    display: block;
+  &::before {
+    content:"";
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    position: absolute;
+    top: -20px;
+    left: 0;
+  }
+
+  ${Root}:hover & {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
   }
 `;
 
-export const DropdownItem = styled.div`
+export const List = styled.ul`
+  margin: 0;
+  padding: 0;
+`;
+
+export const Item = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
   cursor: pointer;
-  
-
 
   &:hover {
-    background-color: #ddd;
+    background-color: #7e7e7e80;
   }
 `;
 

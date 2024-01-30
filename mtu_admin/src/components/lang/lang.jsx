@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { DropdownContainer, DropdownButton, DropdownContent, DropdownItem, FlagIcon } from './lang.styled';
+import { Root, Button, Content, List, Item, FlagIcon } from './lang.styled';
 
 import flagFR from './Flag_of_France.png';
 import flagDE from './Flag_of_Germany.png';
@@ -38,21 +38,23 @@ export default function Lang () {
     };
 
     return (
-        <DropdownContainer>
-        <DropdownButton onClick={toggleDropdown}>
-        <FlagIcon src={getFlagImage(selectedLanguage)} alt={selectedLanguage} />
-        {`${selectedLanguage}`}
-      </DropdownButton>
-      <DropdownContent>
-        {['EN', 'DE', 'FR', 'ES', 'IT'].map((language) => (
-          language !== selectedLanguage && (
-            <DropdownItem key={language} onClick={() => handleLanguageSelect(language)}>
-              <FlagIcon src={getFlagImage(language)} alt={language} />
-              {language}
-            </DropdownItem>
-          )
-        ))}
-      </DropdownContent>
-      </DropdownContainer>
+        <Root>
+          <Button onClick={toggleDropdown}>
+            <FlagIcon src={getFlagImage(selectedLanguage)} alt={selectedLanguage} />
+            {`${selectedLanguage}`}
+          </Button>
+          <Content>
+            <List>
+              {['EN', 'DE', 'FR', 'ES', 'IT'].map((language) => (
+                language !== selectedLanguage && (
+                  <Item key={language} onClick={() => handleLanguageSelect(language)}>
+                    <FlagIcon src={getFlagImage(language)} alt={language} />
+                    {language}
+                  </Item>
+                )
+              ))}
+            </List>
+          </Content>
+      </Root>
     );
 };

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Root = styled.div`
+    display: flex;
+    margin: 0 20px;
 `;
 
 export const Label = styled.label`
@@ -8,7 +10,7 @@ export const Label = styled.label`
     height: 30px;
     position: relative;
     display: block;
-    background: #ebebeb;
+    background: #fff;
     border-radius: 20px;
     box-shadow: inset 0 5px 15px rgb(0,0,0,0.4), inset 0 -5px 15px rgb(255,255,255,0.4);
     cursor: pointer;
