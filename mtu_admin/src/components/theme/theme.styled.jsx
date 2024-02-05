@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Root = styled.div`
     display: flex;
-    margin: 0 20px;
+    margin: 0 30px;
 `;
 
 export const Label = styled.label`

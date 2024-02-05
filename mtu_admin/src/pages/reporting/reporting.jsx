@@ -1,9 +1,11 @@
 import React from 'react';
+import BarChartExample from '../../components/recharts/recharts';
 
 export default function Reporting () {
     return (
         <div>
-            <p>ceci est la page reporting ceci est la page reporting ceci est la page reporting ceci est la page reporting</p>
+            <BarChartExample/>
+            <p>ceci est la page reporting</p>
         </div>
     );
 };

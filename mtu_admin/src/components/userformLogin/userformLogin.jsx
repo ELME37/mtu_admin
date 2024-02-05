@@ -56,13 +56,7 @@ export default function UserformLogin () {
                     })}/>
                     <ContainerError>
                         {errorsSignup.password && 
-                            <ContainerError>
-                                <Error>Le mot de passe doit contenir:</Error>
-                                <Error>- 8 caractères</Error>
-                                <Error>- 1 lettre majuscule</Error>
-                                <Error>- 1 lettre minuscule</Error>
-                                <Error>- 1 chiffre</Error>
-                            </ContainerError>
+                            <Error>Le mot de passe doit contenir: (8 caractères, 1 lettre majuscule, 1 lettre minuscule, 1 chiffre)</Error>
                         }
                     </ContainerError>
                     <Button type="submit">Créer un compte</Button>

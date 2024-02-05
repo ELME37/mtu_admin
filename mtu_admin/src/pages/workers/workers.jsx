@@ -1,9 +1,11 @@
 import React from 'react';
+import TableExample from '../../components/table/table';
 
 export default function Workers () {
     return (
         <div>
-            <p>ceci est la page des collaborateurs ceci est la page des collaborateurs ceci est la page des collaborateurs ceci est la page des collaborateurs</p>
+            <TableExample/>
+            <p>ceci est la page des collaborateurs</p>
         </div>
     );
 };

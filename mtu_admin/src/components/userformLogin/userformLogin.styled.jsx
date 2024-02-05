@@ -58,18 +58,8 @@ export const ContentLogin = styled.div`
   transform: ${(props) => (props.$isVisible ? 'translateX(0)' : 'translateX(-104%)')};
 `;
 
-export const ContentSignUp = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 96%;
-  height: 96%;
-  border-radius: 12px;
-  z-index: 1000;
+export const ContentSignUp = styled(ContentLogin)`
   background: ${colors.blue};
-  transition: transform 0.5s ease-in-out;
   transform: ${(props) => (props.$isVisible ? 'translateX(0)' : 'translateX(104%)')};
   `;
 
@@ -81,11 +71,8 @@ export const TitleLogin = styled.h2`
   }
 `;
 
-export const TitleSignUp = styled.h2`
-  font-size: 24px;
-  font-style: italic;
+export const TitleSignUp = styled(TitleLogin)`
   color: ${colors.gold};
-  margin-bottom: 30px;
   }
 `;
 
@@ -115,21 +102,8 @@ export const InputLogin = styled.input`
   }
 `;
 
-export const InputSignUp = styled.input`
-  position: relative;
-  width: 80%;
-  outline: none;
+export const InputSignUp = styled(InputLogin)`
   border: 1px ${colors.gold} solid;
-  background: rgba(0,0,0,0.15);
-  margin-top: 20px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #fff;
-
-  &::placeholder {
-    color: rgba(255,255,255,0.5);
-  }
 `;
 
 export const ContainerError = styled.div`
@@ -138,7 +112,6 @@ export const ContainerError = styled.div`
     align-items: center;
     width: 80%;
     margin-top: 4px;
-  }
 `;
 
 export const Error = styled.p`
@@ -147,7 +120,6 @@ export const Error = styled.p`
     color: red;
     margin: 0;
     padding: 0;
-  }
 `;
 
 export const ContainerLinksLogin = styled.div`
@@ -156,16 +128,10 @@ export const ContainerLinksLogin = styled.div`
   align-items: center;
   width: 80%;
   margin: 10px 0;
-  }
 `;
 
-export const ContainerLinksSignUp = styled.div`
-  display: flex;
+export const ContainerLinksSignUp = styled(ContainerLinksLogin)`
   justify-content: end;
-  align-items: center;
-  width: 80%;
-  margin: 20px 0;
-  }
 `;
 
 export const LinksLogin = styled.a`
