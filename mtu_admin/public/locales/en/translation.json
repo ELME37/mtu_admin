@@ -1,0 +1,16 @@
+{
+    "sidebar": {
+      "mesCollaborateurs": "My Collaborators",
+      "planning": "Planning",
+      "entretiens": "Interviews",
+      "historique": "History",
+      "reporting": "Reporting",
+      "campagne": "Compaign"
+    },
+
+    "footerSidebar": {
+      "question": "Have a Question?",
+      "contact": "Feel free to contact us at the following:",
+      "mail": "Send an email"
+    }
+}

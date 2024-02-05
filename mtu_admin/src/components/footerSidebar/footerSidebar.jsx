@@ -1,15 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Root, Text, Contact, Mail} from './footerSidebar.styled';
 
 export default function FooterSidebar () {
+    const { t, i18n } = useTranslation();
     return (
         <Root>
-            <Text>Une Question ?</Text>
-            <Text>N'hésitez pas à me contacter à l'adresse suivante :</Text>
+            <Text>{t("footerSidebar.question")}</Text>
+            <Text>{t("footerSidebar.contact")}</Text>
             <Text>contact@mturquais.fr</Text>
             <Contact>
                 <Mail href="mailto:contact@mturquais.fr">
-                    Envoyer un mail
+                    {t("footerSidebar.mail")}
                 </Mail>  
             </Contact>
         </Root>

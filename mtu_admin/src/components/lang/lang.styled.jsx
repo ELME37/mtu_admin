@@ -14,6 +14,7 @@ export const Button = styled.button`
   color: white;
   font-size: 16px;
   border: none;
+  text-transform: uppercase;
   cursor: pointer;
 `;
 
@@ -55,6 +56,7 @@ export const Item = styled.li`
   justify-content: center;
   align-items: center;
   padding: 10px;
+  text-transform: uppercase;
   cursor: pointer;
 
   &:hover {

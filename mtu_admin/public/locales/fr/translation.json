@@ -1,0 +1,16 @@
+{
+    "sidebar": {
+      "mesCollaborateurs": "Mes Collaborateurs",
+      "planning": "Planification",
+      "entretiens": "Entretiens",
+      "historique": "Historique",
+      "reporting": "Reporting",
+      "campagne": "Campagne"
+    },
+
+    "footerSidebar": {
+      "question": "Une question ?",
+      "contact": "N'hésitez pas à nous contacter à l'adresse suivante :",
+      "mail": "Envoyer un mail"
+    }
+}
